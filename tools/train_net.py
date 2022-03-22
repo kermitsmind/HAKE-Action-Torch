@@ -152,7 +152,9 @@ if __name__ == "__main__":
 
     loggers = setup_logging(cfg.LOG_DIR)
     loggers.train.info('==> Training Activity2Vec <==')
-    loggers.train.info('==> cfg:\n' + cfg)
+    # loggers.train.info('==> cfg:\n' + cfg)
+    loggers.train.info('cfg:')
+    loggers.train.info(cfg)
 
     np.random.seed(cfg.RNG_SEED)
     torch.manual_seed(cfg.RNG_SEED)
