@@ -63,7 +63,8 @@ def im_read(im_path):
             im = im[:,:,::-1]
             im = np.array(im)
         else:
-            raise NotImplementedError
+            # raise NotImplementedError
+            im = im[:, :, ::-1]
     return im
 
 # Generate the skeleton input for each human pose.
